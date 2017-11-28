@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block section %}
+<hr>
+<h2><b>¡¡Registro Exitoso!!</b></h2>
+<hr>
+{% endblock section %}
+{% block maincontent %}
+	{% for p in object_list.all %}
+				<a href="{% url 'formulario-detail' p.pk %}">
+					<table class="table table-striped table-inverse" >
+					  <thead>
+					<tr class="bg-primary">
+					<td>Docente :{{p.nombreCliente}} </td>
+					<td>Recurso :{{p.nombreRecurso}} </td>
+					<td>Concepto Prestamo :{{p.conceptoPrestamo}} </td>
+					<td>Fecha Prestamo :{{p.fechaPrestamo}} </td>
+					<td>Fecha Devolucion : {{p.fechaDevolucion}} </td> 
+					</tr>
+					</table>
+				</a>
+	{% endfor %}
+{% endblock maincontent %}

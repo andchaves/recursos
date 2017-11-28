@@ -1,0 +1,33 @@
+{% extends 'adminlte/base.html' %}
+{% block title %}Prestamo{% endblock %}
+
+{% include 'material/includes/material_css.html' %}
+
+{% include 'material/includes/material_js.html' %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>Prestamos</title>
+
+<body>
+
+<body>
+<div class='col-sm-6 col-sm-offset-3'>
+	<h1><strong> <i style="font-size:48px;font-family: fantasy;color:#0B614B">Formulario de Prestamos</i></strong></h1>
+	<ul>
+	</ul>
+	<hr>
+	<div>
+		{% block section %}
+		{% endblock section %}
+	</div>
+	<div>
+	{% block content %}
+		{% block maincontent %}
+		{% endblock maincontent %}
+	{% endblock %}	
+	</div>
+</body>
+</html>

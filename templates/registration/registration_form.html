@@ -1,0 +1,24 @@
+{% load i18n %}
+{% load crispy_forms_tags %}
+{% block content %}
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<div class='row'>
+<div class='col-sm-6 col-sm-offset-3'>
+	<h2 class='text-align-center'><strong>CREA TU CUENTA</strong></h2><br/>
+<form method="post" action=".">
+  {% csrf_token %}
+  {{ form|crispy }}
+
+  <input class='btn btn-block btn-success' type="submit" value="{% trans 'Registrarme' %}" />
+</form>
+</div>
+</div>
+
+<hr/>
+<div class='row'>
+<div class='col-sm-6 col-sm-offset-3 text-align-center'>
+<p>Ya tienes cuenta? <a href="{% url 'auth_login' %}"> Iniciar Sesión.</a></p>
+</div>
+</div>
+{% endblock %}

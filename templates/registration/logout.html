@@ -1,0 +1,10 @@
+
+{% load i18n %}
+
+{% block content %}
+
+<p class='lead'>{% trans "Sesión terminada." %}</p>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<p><a href="{% url 'auth_login' %}"><i style="font-size:24px;color:red" class="fa fa-expeditedssl"  > Iniciar Sesion</i> </a></p></p>
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block maincontent %}
+<form action="" method="post">{% csrf_token %}
+<p>¿ESta seguro que desea eliminar "{{ object.nombre_recurso }}"?</p>
+<input type="submit" class='btn btn-success ' value="Confirm"/>
+<a class='btn btn-primary' href="{% url 'recrusos-list' %}">Cancelar</a>
+</form>
+{% endblock maincontent %}
+

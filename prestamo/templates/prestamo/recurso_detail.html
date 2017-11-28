@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block section %}
+<h2>Cliente</h2>
+
+{% endblock section %}
+{% block maincontent %}
+
+<div>
+
+	<table class="table table-striped table-inverse" >
+					  <thead>
+					<tr class="success">
+			<td><h1>{{object.nombre}} </h1></td>
+
+			<td><a href="{% url 'recursos-update' object.id %}"><h1>Editar</h1></a> </td>
+			<td><a href="{% url 'recursos-delete' object.id %}"><h1>Eliminar</h1></a​></td>
+		</tr>
+	</table>
+</div>
+{% endblock maincontent %}
+
+
+
+{{ object.id }}, {{ object.name }}

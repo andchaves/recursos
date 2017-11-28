@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block maincontent %}
+<div class='row'>
+<div class='col-sm-6 col-sm-offset-3'>
+<h5>Recursos:</h5>
+<form enctype="multipart/form-data" method='POST' action="">
+	{% csrf_token %}     
+	{{ form.as_p }}
+	<button class="btn btn-primary" type="submit">Guardar</button>
+	<a href="{% url 'recursos-list' %}" class="btn btn-link">Cancel</a>
+</form>
+</div>
+</div>
+{% endblock maincontent %}
